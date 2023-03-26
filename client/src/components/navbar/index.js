@@ -1,6 +1,7 @@
 import classes from "./navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import image from "./LOGO.png";
 import {
   faArrowRightFromBracket,
   faUser,
@@ -34,7 +35,7 @@ export default function () {
       <div className={classes["navbar__avt"]}>
         <div>
           <img
-            src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t1.6435-9/161740475_1098721937275364_3141439153872729811_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=8kVU5tmbsEgAX-rfVu4&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfASvejCfo-QCHPqVvQaxOaEtpOT8PqKDntwieMjHJjtRg&oe=6445F026"
+            src={image}
             alt="Ảnh nền"
             className={classes["background"]}
           ></img>
@@ -57,7 +58,7 @@ export default function () {
             </div>
           </li>
         ))}
-        <li>
+        <li className={classes["end"]}>
           <div className={classes["navbar__item"]}>
             <FontAwesomeIcon
               className={classes["navbar__item-icon"]}

@@ -1,22 +1,22 @@
 import React from "react";
 import classes from "./control.module.scss";
-import images from "../../assets/images";
-
-export default function () {
+function Control({ image, name, num }) {
   return (
     <a>
       <div className={classes.container__box}>
         <div className={classes.content__container}>
           <div>
-            <img className={classes.image__container} src={images.temp} />
+            <img className={classes.image__container} src={image} />
           </div>
           <div>
-            <h4>Nhiet do</h4>
-            <h3>22*C</h3>
+            <h3 className={classes.update__content}>{name}</h3>
+            <h2 className={classes.update__content}>{num}.</h2>
           </div>
         </div>
-        <div className={classes.update__content}>UPDATE 40$</div>
+        <div className={classes.update__content}>UPDATE 5s</div>
       </div>
     </a>
   );
 }
+
+export default Control;
