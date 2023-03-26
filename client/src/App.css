@@ -1,7 +1,13 @@
-.style{
+.style {
     display: flex;
-    align-content: flex-start;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: flex-end;
+    margin-top: 5rem;
+}
+
+.main-container {
+    display: flex;
+    width: 100vw;
+}
+
+.main-content {
+    width: 80vw;
 }

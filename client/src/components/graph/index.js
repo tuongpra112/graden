@@ -10,19 +10,19 @@ import classes from "./graph.module.scss";
 //       </a>
 //     );
 //   }
-  
+
 //   export default Graph;
 
 function Graph({ name }) {
-    return (
-        <a>
-        <div className={classes.container__box}>
-          <div>
-            <h2 className={classes.update__content}>{name}</h2>
-          </div>
+  return (
+    <a>
+      <div className={classes.container__box}>
+        <div>
+          <h2 className={classes.update__content}>{name}</h2>
         </div>
-      </a>
-    );
-  }
-  
-  export default Graph;
+      </div>
+    </a>
+  );
+}
+
+export default Graph;

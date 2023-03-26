@@ -22,7 +22,6 @@ function App() {
     return () => clearInterval(intervalID);
   }, []);
 
-
   let arr = [
     {
       img: images.temp,
@@ -46,7 +45,7 @@ function App() {
     },
   ];
 
-  const arr_graph = ["NHIỆT ĐỘ", 'ĐỘ ẨM', 'ÁNH SÁNG'];
+  const arr_graph = ["NHIỆT ĐỘ", "ĐỘ ẨM", "ÁNH SÁNG"];
   return (
     <div style={{ display: "flex" }}>
       <NavBar />
@@ -54,20 +53,36 @@ function App() {
         <div>
           <h1>WELLCOME TO GREEN GARDEN!</h1>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "80vw",
+          }}
+        >
           {arr.map(data => (
             <Control image={data.img} num={data.num} name={data.name} />
           ))}
         </div>
-        <div>
-        <div className={classes.style}>
-          {arr_graph.map(data => (
-            <Graph name={data}/>
-          ))}
+        <div style={{ display: "flex", marginTop: "5rem" }}>
+          <div
+            style={{
+              width: "50vw",
+              height: "40vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src={images.humid}></img>
+          </div>
+          <div className={classes.style}>
+            {arr_graph.map(data => (
+              <Graph name={data} />
+            ))}
+          </div>
         </div>
       </div>
-      </div>
-      
     </div>
   );
 }
